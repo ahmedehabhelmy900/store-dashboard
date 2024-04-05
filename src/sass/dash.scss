@@ -1,0 +1,45 @@
+.dash {
+  @media (max-width: 768px) {
+    overflow-x: auto;
+    overflow-y: hidden;
+  }
+  .container {
+    min-width: 768px;
+    .products {
+      & > div {
+        grid-template-columns: repeat(4, 25%);
+        &:not(.titles) {
+          box-shadow: -1px 0px 13px 0px #ddd;
+          @media (min-width: 992px) {
+            .over {
+              position: relative;
+              &::before {
+                content: attr(full);
+                position: absolute;
+                left: 0;
+                top: 0;
+                background-color: white;
+                box-shadow: 1px 1px 20px 12px #e5e5e5;
+                padding: 15px;
+                z-index: 5;
+                border-radius: 15px;
+                -webkit-border-radius: 15px;
+                -moz-border-radius: 15px;
+                -ms-border-radius: 15px;
+                -o-border-radius: 15px;
+                opacity: 0;
+                z-index: 2;
+                transition-duration: .3s;
+              }
+              &:hover {
+                &::before {
+                  opacity: 1;
+                }
+              }
+          }
+          }
+        }
+      }
+      }
+    }
+  }
